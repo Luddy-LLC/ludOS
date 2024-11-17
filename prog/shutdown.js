@@ -6,7 +6,7 @@ class ShutdownProgram extends Program {
 
     createWindow() {
         let winfo = {
-            title: 'Are you sure?'
+            title: 'Log Off Windows'
         }
 
         let body = `
@@ -14,11 +14,12 @@ class ShutdownProgram extends Program {
                 <div class="window__dialog-info">
                     <img src="${this.getDialogIcon()}" style="width:32px;height:32px;"/>
                     <p>
-                       This is a website...<br/>What do you expect that to do?
+                       Are you sure you want to log off?
                     </p>
                 </div>
                 <div class="window__dialog-action">
-                    <button autofocus>I dunno.</button>
+                    <button autofocus>Yes</button>
+                    <button>No</button>
                 </div>
             </div>
         `

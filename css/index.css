@@ -348,10 +348,13 @@ hr.hr--accent2 {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-bottom: 1em;
+    
 }
 .start-menu__stripe-text {
     transform: rotate(270deg);
+    width: 280px;
+    margin-left: -129px;
+    margin-bottom: 137px;
     color: white;
 }
 

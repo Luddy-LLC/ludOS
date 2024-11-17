@@ -172,84 +172,26 @@ window.fs.addChild(new Folder({
     name: 'My Documents',
     contents: [
         {
-            img: 'img/desktop/WordPad.png',
-            title: 'Resume.pdf',
-            launch: 'resume'
-        },
-        {
-            img: 'img/desktop/WordPad.png',
-            title: 'CV.pdf',
-            launch: 'cv'
-        },
-        {
             img: 'img/desktop/InternetExplorer.png',
             title: 'GitHub',
             shortcut: true,
-            launch: 'web:https://github.com/pkage'
-        },
-        {
-            img: 'img/desktop/InternetExplorer.png',
-            title: 'LinkedIn',
-            shortcut: true,
-            launch: 'web:https://www.linkedin.com/in/patrick-kage-652ba8122/'
-        },
-        {
-            img: 'img/desktop/InternetExplorer.png',
-            title: 'Keybase',
-            shortcut: true,
-            launch: 'web:https://keybase.io/pkage'
-        },
-        {
-            img: 'img/desktop/InternetExplorer.png',
-            title: 'My Blog',
-            shortcut: true,
-            launch: 'web:https://ka.ge/blog/'
-        },
-        {
-            img: 'img/desktop/Email.png',
-            title: 'Email',
-            shortcut: true,
-            launch: 'email'
-        },
-        {
-            img: 'img/desktop/MyBriefcase.png',
-            title: 'My Portfolio',
-            shortcut: true,
-            launch: 'portfolio'
-        },
-        {
-            img: 'img/special/ORCID.png',
-            title: 'ORCID',
-            shortcut: true,
-            launch: 'web:https://orcid.org/0000-0002-5639-1237'
-        },
-        {
-            img: 'img/desktop/SystemFile.png',
-            title: 'Welcome',
-            shortcut: true,
-            launch: 'welcome'
+            launch: 'web:https://github.com/Luddy-LLC'
         }
     ]
 }))
 
-window.fs.addChild(new Folder({
-    name: 'Recycling Bin',
-    icon: 'img/desktop/RecyclingBin.png',
-    contents: [
-        {
-            img: 'img/desktop/InternetExplorer.png',
-            title: 'Twitter',
-            shortcut: true,
-            launch: 'web:https://twitter.com/patrick_kage'
-        },
-        {
-            img: 'img/desktop/WavFile.png',
-            title: 'roll.wav',
-            shortcut: true,
-            launch: 'web:https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-        }
-    ]
-}))
+// window.fs.addChild(new Folder({
+//     name: 'Recycling Bin',
+//     icon: 'img/desktop/RecyclingBin.png',
+//     contents: [
+//         {
+//             img: 'img/desktop/InternetExplorer.png',
+//             title: 'Luddy LLC Github',
+//             shortcut: true,
+//             launch: 'web:https://github.com/Luddy-LLC'
+//         }
+//     ]
+// }))
 
 window.fs.addChild(new Folder({
     name: 'Network Neighborhood',
@@ -269,44 +211,6 @@ window.fs.addChild(new Folder({
             img: 'img/desktop/Entire Internet.png',
             title: 'Entire Internet',
             launch: 'nop'
-        }
-    ]
-}))
-
-window.fs.root.children['My Documents'].addChild(new Folder({
-    name: 'My Papers',
-    icon: 'img/desktop/Favorites.png',
-    contents: [
-        {
-            img: 'img/special/ArXivFile.png',
-            title: 'Class Introspection...',
-            shortcut: true,
-            launch: 'web:https://arxiv.org/abs/2107.01657'
-        },
-        {
-            img: 'img/desktop/WordPad.png',
-            title: 'Honours Project',
-            shortcut: true,
-            launch: 'web:https://misc.ka.ge/honours.pdf'
-        }
-    ]
-}))
-
-window.fs.root.children['My Documents'].addChild(new Folder({
-    name: 'My Talks',
-    icon: 'img/desktop/Favorites.png',
-    contents: [
-        {
-            img: 'img/desktop/Mplayer.png',
-            title: 'KRHCAI: Class Introspection',
-            shortcut: true,
-            launch: 'web:https://www.youtube.com/watch?v=i2gULufLnf8'
-        },
-        {
-            img: 'img/desktop/Mplayer.png',
-            title: 'HACKCON: Discord For Hackathons',
-            shortcut: true,
-            launch: 'web:https://www.youtube.com/watch?v=9bSudnnyQ5w'
         }
     ]
 }))
