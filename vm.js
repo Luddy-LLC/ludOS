@@ -7,14 +7,14 @@ class RemoteFolder extends Folder {
 
         const contents = req.files
             .map(f => ({
-                img: 'img/desktop/TextFile.png',
+                img: '../img/desktop/TextFile.png',
                 title: f,
                 launch: 'cmd'
             }))
 
         const data = {
             name: path,
-            icon: 'img/desktop/Folder',
+            icon: '../img/desktop/Folder',
             title: path,
             contents
         }

@@ -3,7 +3,7 @@
 //         let wminfo = {
 //             name: 'Terminal',
 //             title: 'Linux Terminal',
-//             icon: 'img/desktop/Linux.png',
+//             icon: '../img/desktop/Linux.png',
 //             resizable: true
 //         }
 

@@ -3,7 +3,7 @@ class PromptProgram extends Program {
         let wminfo = {
             name: 'Prompt',
             title: 'MS-DOS Prompt',
-            icon: 'img/desktop/MSDOS.png',
+            icon: '../img/desktop/MSDOS.png',
             resizable: true
         }
 

@@ -61,7 +61,7 @@ class NotepadProgram extends Program {
         let winfo = {
             name: 'Notepad',
             title,
-            icon: 'img/desktop/Notepad.png',
+            icon: '../img/desktop/Notepad.png',
             resizable: true,
             margin: false,
             app: true

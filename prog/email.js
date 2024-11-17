@@ -3,7 +3,7 @@ class EmailProgram extends Program {
         let winfo = {
             title: 'Compose New Email',
             name: 'Email',
-            icon: 'img/desktop/Email.png',
+            icon: '../img/desktop/Email.png',
             resizable: true,
             margin: false,
             app: true

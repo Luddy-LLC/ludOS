@@ -4,7 +4,7 @@ class FullscreenProgram extends Program {
         let winfo = {
             name: 'Fullscreen',
             title: 'Fullscreen Toggle',
-            icon: 'img/desktop/ProgMan.png',
+            icon: '../img/desktop/ProgMan.png',
         }
 
         let body = `

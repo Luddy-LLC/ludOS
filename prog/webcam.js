@@ -5,7 +5,7 @@ class WebcamProgram extends Program {
         let winfo = {
             name: 'Webcam',
             title,
-            icon: 'img/desktop/Notepad.png',
+            icon: '../img/desktop/Notepad.png',
             resizable: true,
             margin: false,
             app: true
