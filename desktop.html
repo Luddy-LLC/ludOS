@@ -124,7 +124,7 @@
                     </span>
                 </div>
                 <div class="start-menu__menu">
-                    <div class="start-menu__item" data-launch="webr:/">
+                    <div class="start-menu__item" data-launch="webr:/ludOS">
                         <img class="start-menu__icon" src="img/startmenu/LogOff.png" alt="Log Off">
                         <span class="start-menu__item-text">Log Off...</span>
                     </div>
@@ -210,7 +210,7 @@
                 window.location.replace("/");
             } else {
                 var u = JSON.parse(`{"boei16":{"u":"Boeing","p":78309},"bobs01":{"u":"Bob Starkiller","p":75469},"dene32":{"u":"Denebian Proletariat","p":51539},"fran92":{"u":"France","p":12387},"germ71":{"u":"Germany","p":33515},"gert86":{"u":"Gertrude Grounded","p":46448},"indi50":{"u":"India","p":86630},"japa47":{"u":"Japan","p":62542},"kype22":{"u":"Kyper Kueens","p":36384},"lock95":{"u":"Lockjaw Marvin","p":57270},"mart35":{"u":"Martian Magistrate","p":75827},"plut06":{"u":"Plutonian Pact","p":64053},"pola13":{"u":"Polarian-Laza Luxocracy","p":23295},"russ91":{"u":"Russian Federation","p":99338},"sent64":{"u":"Sentarian Socialist Conf.","p":68399},"spac02":{"u":"SpaceY","p":85503},"unit76":{"u":"United States","p":83228}}`);
-                window.history.replaceState({}, document.title, "/" + "");
+                window.history.replaceState({}, document.title, "/" + "ludOS");
                 console.log(u[name]);
             }
             for (e in document.getElementsByClassName('country_name')) {
