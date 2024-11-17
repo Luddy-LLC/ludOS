@@ -29,13 +29,21 @@ class ProgramManager {
 
     async createInstance(name) {
         // slight hack, but allow web: links to be opened in new tabs
-        if (name.length > 4 && name.slice(0,4) === 'web:') {
-            console.log('opening web link')
-            document.querySelector('#dummy')
-                .setAttribute('href', name.slice(4))
-
-            document.querySelector('#dummy').click()
-
+        if (name.length > 4 && name.slice(0,3) === 'web') {
+            // console.log('opening web link')
+            if (name.slice(0,4) === 'web:') {
+                document.querySelector('#dummy')
+                    .setAttribute('href', name.slice(4))
+                document.querySelector('#dummy').setAttribute('target','_blank');
+                document.querySelector('#dummy').click()
+            } else if (name.slice(0,5) === 'webr:') {
+                document.querySelector('#dummy')
+                    .setAttribute('href', name.slice(5))
+                document.querySelector('#dummy').setAttribute('target','');
+                document.querySelector('#dummy').click()
+            } else {
+            
+            }
             return
         }
 

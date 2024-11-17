@@ -28,8 +28,9 @@ html {
     overflow: hidden;
 }
 
+
 body {
-    background-color: #008888;
+    /* background: center no-repeat url('/unlogo.png'), #2c5c6f; */
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -328,7 +329,7 @@ hr.hr--accent2 {
 
     background-color: var(--gray);
 
-    min-height: 100px;
+    min-height: 250px;
     width: 174px;
 
     box-shadow: var(--inset);

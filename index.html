@@ -1,251 +1,88 @@
 <!DOCTYPE html>
 
 <html prefix="og: https://ogp.me/ns#">
-    <head>
-        <title>ludOS</title>
-        <meta content="width=device-width, initial-scale=1" name="viewport">
-        <link rel="stylesheet" href="css/98.css" />
-        <link rel="stylesheet" href="css/index.css" />
-        <link rel="stylesheet" href="css/prog.css" />
-        <link rel="stylesheet" href="lib/xterm/xterm.css" />
-        <link href="img/taskbar/WindowsFlagSmall.png" rel="icon">
 
-        <meta name="theme-color" content="#008888">
+<head>
+    <title>ludOS</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="css/98.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/prog.css" />
+    <link rel="stylesheet" href="lib/xterm/xterm.css" />
+    <link href="img/taskbar/WindowsFlagSmall.png" rel="icon">
+    <meta name="theme-color" content="#0000000">
+    <meta property="name" content="LudMUN Race to Mars" />
+</head>
 
-        <!-- metadata -->
-        <meta property="name" content="Patrick Kage" />
-        <meta property="description" content="Artificial Intelligence &amp; Full-Stack Developer. PhD Student @ the University of Edinburgh's Artificial Intelligence and its Application Institute (AIAI)."/>
-
-        <!-- opengraph metadata -->
-        <meta property="og:title" content="Patrick Kage" />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:description" content="Artificial Intelligence &amp; Full-Stack Developer. PhD Student @ the University of Edinburgh's Artificial Intelligence and its Application Institute (AIAI)."/>
-        <meta property="og:url" content="https://ka.ge/"/>
-        <meta property="og:image" content="https://ka.ge/img/preview.png"/>
-
-        <!-- twitter metadata -->
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:url" content="https://ka.ge/">
-        <meta property="twitter:title" content="Patrick Kage">
-        <meta property="twitter:description" content="Artificial Intelligence &amp; Full-Stack Developer. PhD Student @ the University of Edinburgh's Artificial Intelligence and its Application Institute (AIAI)."/>
-        <meta property="twitter:image" content="https://ka.ge/img/preview.png">
-
-    </head>
-    <body onhover="//document.body.parentElement.requestFullscreen()">
-        <div class="window-host">
-            <div class="window" data-window style="top: 50px;" data-name="Welcome!" data-icon="img/taskbar/WindowsFlagSmall.png" data-wm_order="0" data-_wm_id="initialwindow">
-                <div class="title-bar">
-                    <div class="title-bar-text">
-                        Welcome!
-                    </div>
-                    <div class="title-bar-controls">
-                        <button aria-label="Minimize"></button>
-                        <button aria-label="Close"></button>
-                    </div>
-                </div>
-                <div class="window-body typography">
-
-                    <p>Welcome</p>
-                    <hr class="hr--accent"/>
-                    <p>
-                        Hello World
-                    </p>                    
-               </div>
-            </div>
-        </div>
-        <div class="desktop-container">
-            <canvas id="selections"></canvas>
-            <div class="desktop">
-                <div class="desktop-icon" data-launch="welcome">
-                    <img src="img/desktop/MyComputer.png" alt="My Computer">
-                    <span>My Computer</span>
-                </div>
-                <!-- <div class="desktop-icon" data-launch="explorer:C:/Network Neighborhood">
-                    <img src="img/desktop/NetworkNeighborhood.png" alt="Network Neighborhood">
-                    <span>Network Neighborhood</span>
-                </div> -->
-                <div class="desktop-icon" data-launch="explorer:C:/My Documents">
-                    <img src="img/desktop/MyDocuments.png" alt="My Documents">
-                    <span>My Documents</span>
-                </div>
-                <div class="desktop-icon" data-launch="email">
-                    <img src="img/desktop/Email.png" alt="Outlook Express">
-                    <div class="desktop-icon__shortcut">
-                        <img src="img/ShortcutIcon.png">
-                    </div>
-                    <span>Outlook Express</span>
-                </div>
-                <div class="desktop-icon" data-launch="notepad">
-                    <img src="img/desktop/Notepad.png" alt="Internet Explorer">
-                    <div class="desktop-icon__shortcut">
-                        <img src="img/ShortcutIcon.png">
-                    </div>
-                    <span>Notepad</span>
-                </div>
-                <!-- <div class="desktop-icon" data-launch="web:https://ka.ge/blog/">
-                    <img src="img/desktop/InternetExplorer.png" alt="Internet Explorer">
-                    <div class="desktop-icon__shortcut">
-                        <img src="img/ShortcutIcon.png">
-                    </div>
-                    <span>My Blog</span>
-                </div> -->
-                <!-- <div class="desktop-icon" data-launch="cmd">
-                    <img src="img/desktop/MSDOS.png" alt="DOS Prompt" >
-                    <div class="desktop-icon__shortcut">
-                        <img src="img/ShortcutIcon.png">
-                    </div>
-                    <span>MS-DOS Prompt</span>
-                </div> -->
-                <!--div class="desktop-icon" data-launch="terminal">
-                    <img src="img/desktop/Linux.png" alt="Linux VM" >
-                    <div class="desktop-icon__shortcut">
-                        <img src="img/ShortcutIcon.png">
-                    </div>
-                    <span>Linux VM</span>
-                </div-->
-
-                <div class="desktop-icon" data-launch="explorer:C:/Recycling Bin">
-                    <img src="img/desktop/RecyclingBin.png" alt="RecyclingBin">
-                    <span>Recycling Bin</span>
+<body style="background-color: black;" onclick="document.body.parentElement.requestFullscreen();" onload="document.body.parentElement.requestFullscreen();">
+    <div id="window" class="window-host">
+        <div class="window" id="login" data-window style="top: calc(50% - 100px); left: calc(50% - 208px)" data-name="Welcome!"
+            data-icon="img/taskbar/WindowsFlagSmall.png" data-wm_order="0" data-_wm_id="initialwindow">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                    Enter Network Password
                 </div>
             </div>
-        </div>
-
-
-        <div class="task-bar">
-            <button id="start-btn">
-                <img src="img/taskbar/Start.png"/>
-            </button>
-
-            <div class="task-bar__divider"></div>
-            
-            <img src="img/taskbar/ShowDesktop.png" alt="Show Desktop" title="Show Desktop" class="task-bar__quick">
-            <img src="img/taskbar/IESmall.png" alt="Internet Explorer" title="Lauch Internet Explorer Browser" class="task-bar__quick">
-            <img src="img/taskbar/OutlookExpress.png" alt="Outlook Express" title="Lauch Outlook Express" class="task-bar__quick" data-launch="email">
-
-            <div class="task-bar__divider"></div>
-            <div class="task-bar__main" id="task-bar__main">
-
-            </div>
-            <div class="task-bar__divider"></div>
-            <div class="task-bar__tray">
-                <img src="img/taskbar/TaskScheduler.png" alt="Task Scheduler" title="Task Scheduler is ready." class="task-bar__tray__icon"/>
-                <img src="img/taskbar/Volume.png" alt="Volume" title="Volume" class="task-bar__tray__icon"/>
-                <span id="time">12:57 PM</span>
-            </div>
-        </div>
-
-        <div class="start-menu__container">
-            <div class="start-menu">
-                <div class="start-menu__stripe">
-                    <span class="start-menu__stripe-text">
-                        UN Secure - <b>United States</b>
-                    </span>
-                </div>
-                <div class="start-menu__menu">
-                    <div class="start-menu__item" data-launch="logoff">
-                        <img class="start-menu__icon" src="img/startmenu/LogOff.png" alt="Log Off">
-                        <span class="start-menu__item-text">Log Off...</span>
-                    </div>
-                    <div class="start-menu__divider"></div>
-                    <div class="start-menu__item" data-launch="run">
-                        <img class="start-menu__icon" src="img/startmenu/Run.png" alt="Run">
-                        <span class="start-menu__item-text">Run...</span>
-                    </div>
-                    <div class="start-menu__item" data-launch="explorer:C:/My Documents">
-                        <img class="start-menu__icon" src="img/startmenu/Documents.png" alt="Run">
-                        <span class="start-menu__item-text">My Documents</span>
-                    </div>
-                    <div class="start-menu__item">
-                        <img class="start-menu__icon" src="img/startmenu/Programs.png" alt="Programs">
-                        <span class="start-menu__item-text">Programs</span>
-                        <img src="img/startmenu/MenuIndicator.png" alt="Menu" class="start-menu__item-menu-indicator">
-                        <div class="start-menu__submenu-container">
-                            <div class="start-menu__submenu">
-                                
-                                <div class="start-menu__submenu-item">
-                                    <img class="start-menu__submenu-icon" src="img/startmenu/SubFolder.png" alt="SubFolder">
-                                    <span>In-Call Tools</span>
-                                    <img src="img/startmenu/MenuIndicator.png" alt="Menu" class="start-menu__item-menu-indicator">
-                                    <div class="start-menu__submenu-container">
-                                        <div class="start-menu__submenu">
-                                            <div class="start-menu__submenu-item" data-launch="fullscreen">
-                                                <img class="start-menu__submenu-icon" src="img/desktop/ProgMan.png" alt="WinFlagSmall">
-                                                <span>Fullscreen Mgr</span>
-                                            </div>
-                                            <div class="start-menu__submenu-item" data-launch="webcam">
-                                                <img class="start-menu__submenu-icon" src="img/desktop/BatchFile.png" alt="Text File">
-                                                <span>Webcam</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- <div class="start-menu__submenu-item" data-launch="resume">
-                                    <img class="start-menu__submenu-icon" src="img/desktop/WordPad.png" alt="Text File">
-                                    <span>Resume&nbsp;Viewer</span>
-                                </div> -->
-                                <div class="start-menu__submenu-item" data-launch="notepad">
-                                    <img class="start-menu__submenu-icon" src="img/desktop/Notepad.png" alt="Text File">
-                                    <span>Notepad</span>
-                                </div>
-                                <div class="start-menu__submenu-item" data-launch="email">
-                                    <img class="start-menu__submenu-icon" src="img/desktop/Email.png" alt="Text File">
-                                    <span>Outlook Express</span>
-                                </div>
-                                <!-- <div class="start-menu__submenu-item" data-launch="cmd">
-                                    <img class="start-menu__submenu-icon" src="img/desktop/MSDOS.png" alt="Text File">
-                                    <span>MS-DOS Prompt</span>
-                                </div> -->
-                            </div>
+            <div class="window-body typography">
+                <form id="login-form" style="display: flex;flex-direction: row;gap:15px;">
+                    <img src="img/desktop/NetworkNeighborhood.png" alt="My Computer" style="height:50px">
+                    <div id="form-entry" style="display: flex;flex-direction: column;gap:10px;">
+                        <p>Enter your network password for Microsoft Networking.</p>
+                        <div>
+                            <label for="username">Username</label>
+                            <input class="menu-bar__input" type="text" name="username" id="username" autocomplete="off">
                         </div>
+                        <div>
+                            <label for="password">Password</label>
+                            <input class="menu-bar__input" type="password" name="password" id="password" autocomplete="off">
+                        </div>
+
                     </div>
-                </div>
+                    <div style="display: flex;flex-direction: column;gap:10px;">
+                        <button autofocus="true" type="submit">OK</button>
+                        <button>Cancel</button>
+                    </div>
+                </form>
             </div>
         </div>
-        <a href="#" id="dummy" target="_blank" rel="noopener"></a>
+    </div>
+    <div style="display: flex; justify-content:center; height: 100vh; align-items: center;">
+        <img class="rotate" src="loading.png" alt="loading indicator" style="width:15px;" id="loading">
+    </div>
+    
+    <script>
+        function playAudio(audio){
+            return new Promise(res=>{
+                audio.play()
+                audio.onended = res
+            })
+        }
+        var u = JSON.parse(`{"boei16":{"u":"Boeing","p":78309},"bobs01":{"u":"Bob Starkiller","p":75469},"dene32":{"u":"Denebian Proletariat","p":51539},"fran92":{"u":"France","p":12387},"germ71":{"u":"Germany","p":33515},"gert86":{"u":"Gertrude Grounded","p":46448},"indi50":{"u":"India","p":86630},"japa47":{"u":"Japan","p":62542},"kype22":{"u":"Kyper Kueens","p":36384},"lock95":{"u":"Lockjaw Marvin","p":57270},"mart35":{"u":"Martian Magistrate","p":75827},"plut06":{"u":"Plutonian Pact","p":64053},"pola13":{"u":"Polarian-Laza Luxocracy","p":23295},"russ91":{"u":"Russian Federation","p":99338},"sent64":{"u":"Sentarian Socialist Conf.","p":68399},"spac02":{"u":"SpaceY","p":85503},"unit76":{"u":"United States","p":83228}}`);
+        document.getElementById('login-form').addEventListener("submit", (e) => {
+            e.preventDefault();
+            let error = new Audio('error.mp3');
+            let loginaudio = new Audio('login.mp3');
+            
+            if (document.getElementById('username').value in u && u[document.getElementById('username').value]["p"]==document.getElementById('password').value) {
+                document.getElementById('window').style.opacity = '0';
+                loginaudio.play();
+                setTimeout(() => {
+                    window.location.replace(`/desktop.html?u=${document.getElementById('username').value}`);
+                }, 6000);                
+            } else {
+                document.getElementById('window').style.opacity = '0';
+                setTimeout(() => {
+                    error.play();
+                    document.getElementById('username').value = '';
+                    document.getElementById('password').value = '';
+                    document.getElementById('window').style.opacity = '1';
+                }, 1000)
+                
+            }
+            return false;
+        });
+    </script>
 
-        <script src="lib/inobounce.js" type="text/javascript"></script>
-        <script src="index.js" type="text/javascript"></script>
-        <script src="windows.js" type="text/javascript"></script>
-        <script src="desktop.js" type="text/javascript"></script>
-        <script src="startmenu.js" type="text/javascript"></script>
-        <script src="programs.js" type="text/javascript"></script>
-        <script src="fs.js" type="text/javascript"></script>
-        <!-- <script src="vm.js" type="text/javascript"></script> -->
+</body>
 
-        <script src="prog/resume.js" type="text/javascript" defer></script>
-        <script src="prog/welcome.js" type="text/javascript" defer></script>
-        <script src="prog/prompt.js" type="text/javascript" defer></script>
-        <script src="prog/dialog.js" type="text/javascript" defer></script>
-        <script src="prog/explorer.js" type="text/javascript" defer></script>
-        <script src="prog/portfolio.js" type="text/javascript" defer></script>
-        <script src="prog/notepad.js" type="text/javascript" defer></script>
-        <script src="prog/webcam.js" type="text/javascript" defer></script>
-        <script src="prog/email.js" type="text/javascript" defer></script>
-        <script src="prog/shutdown.js" type="text/javascript" defer></script>
-        <script src="prog/fullscreen.js" type="text/javascript" defer></script>
-        <script src="prog/run.js" type="text/javascript" defer></script>
-        <script src="prog/doom.js" type="text/javascript" defer></script>
-        <!-- <script src="prog/terminal.js" type="text/javascript" defer></script> -->
-        
-        <script src="lib/xterm/xterm.js" type="text/javascript" defer></script>
-        <script src="lib/xterm/fit.js" type="text/javascript" defer></script>
-        <script src="lib/xterm/attach.js" type="text/javascript" defer></script>
-
-        <svg class="svg__defsonly"> 
-            <defs>
-                <filter id="blueselect">
-                     <feColorMatrix type="matrix"
-                         values="0.1   0     0     0 0
-                                 0     0.1   0     0 0
-                                 0     0     1     0 0
-                                 0     0     0     1 0"/>
-                </filter>
-            </defs>
-        </svg>
-
-        <!-- additional metadata -->
-        <a rel="me" style="display: none;" href="https://sigmoid.social/@pkage">Mastodon</a>
-    </body>
 </html>
