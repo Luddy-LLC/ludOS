@@ -47,6 +47,21 @@ body {
     height: 100vh; /* should be overwritten by js, this is for noscript */
 }
 
+.un-background {
+    background: center no-repeat url('/unlogo.png'), #2c5c6f;
+}
+
+.unflag-login::before {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 45px;
+    content: " ";
+    background: center / contain no-repeat url('../img/desktop/NetworkNeighborhood.png');
+    height: 25px;
+    width: 25px;
+}
+
 /* --- TYPOGRAPHY --- */
 
 h1, h2, h3, h4, h5 {

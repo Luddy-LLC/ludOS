@@ -3,13 +3,13 @@
 <html prefix="og: https://ogp.me/ns#">
 
 <head>
-    <title>ludOS</title>
+    <title>UNSecure Login Prompt</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link rel="stylesheet" href="css/98.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/prog.css" />
     <link rel="stylesheet" href="lib/xterm/xterm.css" />
-    <link href="img/taskbar/WindowsFlagSmall.png" rel="icon">
+    <link href="img/unflag.png" rel="icon">
     <meta name="theme-color" content="#0000000">
     <meta property="name" content="LudMUN Race to Mars" />
 </head>
@@ -25,9 +25,11 @@
             </div>
             <div class="window-body typography">
                 <form id="login-form" style="display: flex;flex-direction: row;gap:15px;">
-                    <img src="img/desktop/NetworkNeighborhood.png" alt="My Computer" style="height:50px">
+                    <div class="unflag-login" style="display: flex; align-items: start; justify-content: start;">
+                        <img src="img/unflag.png" alt="My Computer" style="height:50px;" >
+                    </div>
                     <div id="form-entry" style="display: flex;flex-direction: column;gap:10px;">
-                        <p>Enter your network password for Microsoft Networking.</p>
+                        <p>Enter your network password for United Nations Secure Connect.</p>
                         <div>
                             <label for="username">Username</label>
                             <input class="menu-bar__input" type="text" name="username" id="username" autocomplete="off">
@@ -57,7 +59,7 @@
                 audio.onended = res
             })
         }
-        var u = JSON.parse(`{"boei16":{"u":"Boeing","p":78309},"bobs01":{"u":"Bob Starkiller","p":75469},"dene32":{"u":"Denebian Proletariat","p":51539},"fran92":{"u":"France","p":12387},"germ71":{"u":"Germany","p":33515},"gert86":{"u":"Gertrude Grounded","p":46448},"indi50":{"u":"India","p":86630},"japa47":{"u":"Japan","p":62542},"kype22":{"u":"Kyper Kueens","p":36384},"lock95":{"u":"Lockjaw Marvin","p":57270},"mart35":{"u":"Martian Magistrate","p":75827},"plut06":{"u":"Plutonian Pact","p":64053},"pola13":{"u":"Polarian-Laza Luxocracy","p":23295},"russ91":{"u":"Russian Federation","p":99338},"sent64":{"u":"Sentarian Socialist Conf.","p":68399},"spac02":{"u":"SpaceY","p":85503},"unit76":{"u":"United States","p":83228}}`);
+        var u = JSON.parse(`{"beoi16":{"u":"Beoing","p":78309},"bobs01":{"u":"Bob Starkiller","p":75469},"dene32":{"u":"Denebian Proletariat","p":51539},"fran92":{"u":"France","p":12387},"germ71":{"u":"Germany","p":33515},"gert86":{"u":"Gertrude Grounded","p":46448},"indi50":{"u":"India","p":86630},"japa47":{"u":"Japan","p":62542},"kype22":{"u":"Kyper Kueens","p":36384},"lock95":{"u":"Lockjaw Marvin","p":57270},"mart35":{"u":"Martian Magistrate","p":75827},"plut06":{"u":"Plutonian Pact","p":64053},"pola13":{"u":"Polarian-Laza Luxocracy","p":23295},"russ91":{"u":"Russian Federation","p":99338},"sent64":{"u":"Sentarian Socialist Conf.","p":68399},"spac02":{"u":"SpaceY","p":85503},"unit76":{"u":"United States","p":83228}}`);
         document.getElementById('login-form').addEventListener("submit", (e) => {
             e.preventDefault();
             let error = new Audio('error.mp3');
@@ -67,7 +69,7 @@
                 document.getElementById('window').style.opacity = '0';
                 loginaudio.play();
                 setTimeout(() => {
-                    window.location.replace(`/ludOS/desktop.html?u=${document.getElementById('username').value}`);
+                    window.location.replace(`desktop.html?u=${document.getElementById('username').value}`);
                 }, 6000);                
             } else {
                 document.getElementById('window').style.opacity = '0';

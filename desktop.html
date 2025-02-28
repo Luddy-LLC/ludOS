@@ -2,29 +2,28 @@
 
 <html prefix="og: https://ogp.me/ns#">
     <head>
-        <title>ludOS</title>
+        <title>UNSecure Desktop</title>
         <meta content="width=device-width, initial-scale=1" name="viewport">
         <link rel="stylesheet" href="css/98.css" />
         <link rel="stylesheet" href="css/index.css" />
         <link rel="stylesheet" href="css/prog.css" />
-        <link rel="stylesheet" href="lib/xterm/xterm.css" />
-        <link href="img/taskbar/WindowsFlagSmall.png" rel="icon">
+        <link href="img/unflag.png" rel="icon">
         <meta name="theme-color" content="#008888">
         <meta property="name" content="LudMUN Race to Mars" />
     </head>
-    <body style="background: center no-repeat url('/unlogo.png'), #2c5c6f;"onclick="document.body.parentElement.requestFullscreen();">
+    <body class="un-background" onclick="document.body.parentElement.requestFullscreen();">
         <div class="window-host">
-            <div class="window" data-window style="top: 50px;" data-name="Welcome!" data-icon="img/taskbar/WindowsFlagSmall.png" data-wm_order="0" data-_wm_id="initialwindow">
+            <div class="window" data-window="" style="top:50px" data-name="Welcome!" data-icon="img/taskbar/WindowsFlagSmall.png" data-wm_order="0" data-_wm_id="initialwindow">
                 <div class="title-bar">
                     <div class="title-bar-text">
-                        Welcome!
+                        Welcome to your Windows 98 Account!
                     </div>
                     <div class="title-bar-controls">
                         <button aria-label="Minimize"></button>
                         <button aria-label="Close"></button>
                     </div>
                 </div>
-                <div class="window-body typography">
+                <div class="window-body typography" data-name="">
 
                     <p>Welcome</p>
                     <hr class="hr--accent"/>
@@ -207,10 +206,10 @@
             const urlParams = new URLSearchParams(window.location.search);
             name = urlParams.get('u');
             if (name == null || name == "null") {
-                window.location.replace("/");
+                // window.location.replace("/");
             } else {
                 var u = JSON.parse(`{"boei16":{"u":"Boeing","p":78309},"bobs01":{"u":"Bob Starkiller","p":75469},"dene32":{"u":"Denebian Proletariat","p":51539},"fran92":{"u":"France","p":12387},"germ71":{"u":"Germany","p":33515},"gert86":{"u":"Gertrude Grounded","p":46448},"indi50":{"u":"India","p":86630},"japa47":{"u":"Japan","p":62542},"kype22":{"u":"Kyper Kueens","p":36384},"lock95":{"u":"Lockjaw Marvin","p":57270},"mart35":{"u":"Martian Magistrate","p":75827},"plut06":{"u":"Plutonian Pact","p":64053},"pola13":{"u":"Polarian-Laza Luxocracy","p":23295},"russ91":{"u":"Russian Federation","p":99338},"sent64":{"u":"Sentarian Socialist Conf.","p":68399},"spac02":{"u":"SpaceY","p":85503},"unit76":{"u":"United States","p":83228}}`);
-                window.history.replaceState({}, document.title, "/" + "ludOS");
+                // window.history.replaceState({}, document.title, "/" + "ludOS");
                 console.log(u[name]);
             }
             for (e in document.getElementsByClassName('country_name')) {
