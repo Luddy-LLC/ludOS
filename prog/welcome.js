@@ -10,7 +10,7 @@ class WelcomeProgram extends Program {
         let wminfo = {
             title: 'Welcome to your Windows 98 Account!',
             name:  'Welcome!',
-            icon:  '../img/desktop/MyDocuments.png',
+            icon:  'img/taskbar/WindowsFlagSmall.png',
         }
 
         return [wminfo, body]
