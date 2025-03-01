@@ -10,7 +10,7 @@ class WelcomeProgram extends Program {
         let wminfo = {
             title: 'Welcome to your Windows 98 Account!',
             name:  'Welcome!',
-            icon:  'ludOS/img/desktop/MyDocuments.png',
+            icon:  'img/desktop/MyDocuments.png',
         }
 
         return [wminfo, body]

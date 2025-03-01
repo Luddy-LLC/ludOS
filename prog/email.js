@@ -4,7 +4,7 @@ class EmailProgram extends Program {
         let winfo = {
             title: 'United Nations Message Center',
             name: 'Message Center',
-            icon: 'ludOS/img/desktop/Email.png',
+            icon: 'img/desktop/Email.png',
             resizable: true,
             margin: false,
             app: true
