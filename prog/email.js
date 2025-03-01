@@ -73,7 +73,7 @@ class EmailProgram extends Program {
         }
 
         let body = `
-            <div class="menu-bar__container" style="max-height: calc(70vh);min-width: 400px;">
+            <div class="menu-bar__container" style="max-height: calc(70vh); width: 60vw; min-width:400px;">
                 <div class="menu-bar__menu">
                     <div class="menu-bar__handle"></div>
                     <span class="menu-bar__item">
@@ -137,7 +137,7 @@ class EmailProgram extends Program {
         }
 
         console.log(json_email)
-        let subject = `<div style="padding:5px; padding-bottom:0px; font-size:1.3em; font-weight:bold;"> &middot;&middot;&middot; ` + subject_prefix +  json_email.subject + `</div><hr class="hr--accent" style="height:2px;">`
+        let subject = `<div style="padding:5px; padding-bottom:0px; font-size:1.3em; font-weight:bold;"> ` + subject_prefix +  json_email.subject + `</div><hr class="hr--accent" style="height:2px;">`
         let body = `<div style="padding:5px; font-size:1.2em; font-weight:bold">` +  json_email.body + `</div>`
 
         let stats = `<div style="display:flex; justify-content: space-evenly; text-align:center; font-size:small"> <div>` + 
