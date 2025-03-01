@@ -13,7 +13,7 @@
     </head>
     <body class="un-background" onclick="document.body.parentElement.requestFullscreen();">
         <div class="window-host">
-            <div class="window" data-window="" style="top:50px" data-name="Welcome!" data-icon="img/taskbar/WindowsFlagSmall.png" data-wm_order="0" data-_wm_id="initialwindow">
+            <div class="window" data-window="" style="top:50px" data-name="Welcome!" data-icon="img/taskbar/SystemFile.png" data-wm_order="0" data-_wm_id="initialwindow">
                 <div class="title-bar">
                     <div class="title-bar-text">
                         Welcome to your Windows 98 Account!
@@ -23,37 +23,41 @@
                         <button aria-label="Close"></button>
                     </div>
                 </div>
-                <div class="window-body typography" data-name="">
-
-                    <p>Welcome</p>
-                    <hr class="hr--accent"/>
-                    <p>
-                        Hello World
-                    </p>                    
+                <div class="window-body typography" data-name="welcome">
+                    <img src="unlogo.png" width="20%" style="filter: invert();margin: 0 40%;padding: 10px 0px;">
+                    <p>Welcome, <strong id="representative-of"></strong>!<br><br>
+                    Your Windows 98 account has been provisioned, so you now have secure access to view communications from your home government or council. To view these messages, visit the <strong>Message Center</strong>. You are also welcome to take notes in <strong>Notepad</strong>, which will securely delete your notes when closed.<br><br>
+                    Please let us know you have any questions, and enjoy your new account.<br></p>
+                    <hr class="hr--accent">
+                    <p>Sincerely,<br>United Nations Information Technology Services</p>          
                </div>
             </div>
         </div>
         <div class="desktop-container">
             <canvas id="selections"></canvas>
             <div class="desktop">
-                <div class="desktop-icon" data-launch="welcome">
+                <!-- <div class="desktop-icon" data-launch="welcome">
                     <img src="img/desktop/MyComputer.png" alt="My Computer">
                     <span>My Computer</span>
-                </div>
+                </div> -->
                 <!-- <div class="desktop-icon" data-launch="explorer:C:/Network Neighborhood">
                     <img src="img/desktop/NetworkNeighborhood.png" alt="Network Neighborhood">
                     <span>Network Neighborhood</span>
                 </div> -->
-                <div class="desktop-icon" data-launch="explorer:C:/My Documents">
+                <!-- <div class="desktop-icon" data-launch="explorer:C:/My Documents">
                     <img src="img/desktop/MyDocuments.png" alt="My Documents">
                     <span>My Documents</span>
+                </div> -->
+                <div class="desktop-icon" data-launch="welcome">
+                    <img src="img/desktop/SystemFile.png" alt="Country Report">
+                    <span>Welcome</span>
                 </div>
                 <div class="desktop-icon" data-launch="email">
-                    <img src="img/desktop/Email.png" alt="Outlook Express">
+                    <img src="img/desktop/Email.png" alt="Message Center">
                     <div class="desktop-icon__shortcut">
                         <img src="img/ShortcutIcon.png">
                     </div>
-                    <span>Outlook Express</span>
+                    <span>Message Center</span>
                 </div>
                 <div class="desktop-icon" data-launch="notepad">
                     <img src="img/desktop/Notepad.png" alt="Internet Explorer">
@@ -61,32 +65,6 @@
                         <img src="img/ShortcutIcon.png">
                     </div>
                     <span>Notepad</span>
-                </div>
-                <!-- <div class="desktop-icon" data-launch="web:https://ka.ge/blog/">
-                    <img src="img/desktop/InternetExplorer.png" alt="Internet Explorer">
-                    <div class="desktop-icon__shortcut">
-                        <img src="img/ShortcutIcon.png">
-                    </div>
-                    <span>My Blog</span>
-                </div> -->
-                <!-- <div class="desktop-icon" data-launch="cmd">
-                    <img src="img/desktop/MSDOS.png" alt="DOS Prompt" >
-                    <div class="desktop-icon__shortcut">
-                        <img src="img/ShortcutIcon.png">
-                    </div>
-                    <span>MS-DOS Prompt</span>
-                </div> -->
-                <!--div class="desktop-icon" data-launch="terminal">
-                    <img src="img/desktop/Linux.png" alt="Linux VM" >
-                    <div class="desktop-icon__shortcut">
-                        <img src="img/ShortcutIcon.png">
-                    </div>
-                    <span>Linux VM</span>
-                </div-->
-
-                <div class="desktop-icon" data-launch="explorer:C:/Recycling Bin">
-                    <img src="img/desktop/RecyclingBin.png" alt="RecyclingBin">
-                    <span>Recycling Bin</span>
                 </div>
             </div>
         </div>
@@ -119,7 +97,7 @@
             <div class="start-menu">
                 <div class="start-menu__stripe">
                     <span class="start-menu__stripe-text">
-                        UN Secure - <b class="country_name">United States</b>
+                        UN Secure - <strong id="start-menu-country-name" class="country_name"></strong>
                     </span>
                 </div>
                 <div class="start-menu__menu">
@@ -143,7 +121,7 @@
                         <div class="start-menu__submenu-container">
                             <div class="start-menu__submenu">
                                 
-                                <div class="start-menu__submenu-item">
+                                <!-- <div class="start-menu__submenu-item">
                                     <img class="start-menu__submenu-icon" src="img/startmenu/SubFolder.png" alt="SubFolder">
                                     <span>In-Call Tools</span>
                                     <img src="img/startmenu/MenuIndicator.png" alt="Menu" class="start-menu__item-menu-indicator">
@@ -159,18 +137,18 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- <div class="start-menu__submenu-item" data-launch="resume">
-                                    <img class="start-menu__submenu-icon" src="img/desktop/WordPad.png" alt="Text File">
-                                    <span>Resume&nbsp;Viewer</span>
                                 </div> -->
+                                <div class="start-menu__submenu-item" data-launch="welcome">
+                                    <img class="start-menu__submenu-icon" src="img/desktop/WordPad.png" alt="Text File">
+                                    <span>Welcome</span>
+                                </div>
                                 <div class="start-menu__submenu-item" data-launch="notepad">
                                     <img class="start-menu__submenu-icon" src="img/desktop/Notepad.png" alt="Text File">
                                     <span>Notepad</span>
                                 </div>
                                 <div class="start-menu__submenu-item" data-launch="email">
                                     <img class="start-menu__submenu-icon" src="img/desktop/Email.png" alt="Text File">
-                                    <span>Outlook Express</span>
+                                    <span>Message Center</span>
                                 </div>
                                 <!-- <div class="start-menu__submenu-item" data-launch="cmd">
                                     <img class="start-menu__submenu-icon" src="img/desktop/MSDOS.png" alt="Text File">
@@ -203,14 +181,22 @@
         <script src="prog/run.js" type="text/javascript" defer></script>
     
         <script>
+            let newMessageSound = new Audio('./notify.mp3');
             const urlParams = new URLSearchParams(window.location.search);
-            name = urlParams.get('u');
+            user = urlParams.get('u');
+            pass = urlParams.get('p');
+            name = "";
             if (name == null || name == "null") {
                 // window.location.replace("/");
             } else {
-                var u = JSON.parse(`{"boei16":{"u":"Boeing","p":78309},"bobs01":{"u":"Bob Starkiller","p":75469},"dene32":{"u":"Denebian Proletariat","p":51539},"fran92":{"u":"France","p":12387},"germ71":{"u":"Germany","p":33515},"gert86":{"u":"Gertrude Grounded","p":46448},"indi50":{"u":"India","p":86630},"japa47":{"u":"Japan","p":62542},"kype22":{"u":"Kyper Kueens","p":36384},"lock95":{"u":"Lockjaw Marvin","p":57270},"mart35":{"u":"Martian Magistrate","p":75827},"plut06":{"u":"Plutonian Pact","p":64053},"pola13":{"u":"Polarian-Laza Luxocracy","p":23295},"russ91":{"u":"Russian Federation","p":99338},"sent64":{"u":"Sentarian Socialist Conf.","p":68399},"spac02":{"u":"SpaceY","p":85503},"unit76":{"u":"United States","p":83228}}`);
-                // window.history.replaceState({}, document.title, "/" + "ludOS");
-                console.log(u[name]);
+                var u = JSON.parse(`{"beoi16":{"u":"Beoing"},"bobs01":{"u":"Bob Starkiller"},"dene32":{"u":"Denebian Proletariat"},"fran92":{"u":"France"},"germ71":{"u":"Germany"},"gert86":{"u":"Gertrude Grounded"},"indi50":{"u":"India"},"ital19":{"u":"Italy"},"japa47":{"u":"Japan"},"kype22":{"u":"Kyper Kueens"},"lock95":{"u":"Lockjaw Marvin"},"mart35":{"u":"Martian Magistrate"},"plut06":{"u":"Plutonian Pact"},"pola13":{"u":"Polarian-Laza Luxocracy"},"chin45":{"u":"PRC"},"russ91":{"u":"Russian Federation"},"sent64":{"u":"Sentarian Socialist Confederation"},"spac02":{"u":"SpaceY"},"ukni22":{"u":"UK"},"unit76":{"u":"United States"}}`);
+                window.history.replaceState({}, document.title, "/" + "ludOS");
+                document.getElementsByTagName('html')[0].setAttribute('u',user);
+                document.getElementsByTagName('html')[0].setAttribute('p',pass);
+                name = u[user]["u"];
+                document.getElementsByTagName('html')[0].setAttribute('name',name);
+                document.getElementById('representative-of').innerText = `Representative of ${name}`;
+                document.getElementById('start-menu-country-name').innerText = user;
             }
             for (e in document.getElementsByClassName('country_name')) {
                 e.innerText = name;

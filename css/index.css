@@ -718,6 +718,20 @@ canvas#selections {
     margin: 0 1rem;
 }
 
+/* --- MAIL --- */
+
+[data-name="Message Center"] {
+    max-width: 700px;
+}
+
+[data-name="Message Center"] .window-body {
+    overflow-y: scroll;
+}
+
+[data-name="Message Center"] .email-message {
+    background-color: #e7e7e7;
+}
+
 /* --- SHIMS ----*/
 
 .window > .title-bar { user-select: none; -webkit-user-select: none; }
