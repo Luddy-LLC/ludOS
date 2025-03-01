@@ -91,7 +91,7 @@ class EmailProgram extends Program {
                 </div>
                 <div class="menu-bar__hr"></div>
 
-                <div class="menu-bar__container" style="padding:5px; font-size:large;">Inbox</div>
+                <div class="menu-bar__container" style="padding:5px; font-size:2em; font-weight:bold;">Inbox</div>
                 `
         body += `<div style="height: calc(70vh - 60px); overflow-y: auto;">`
 
@@ -137,7 +137,7 @@ class EmailProgram extends Program {
         }
 
         console.log(json_email)
-        let subject = `<div style="padding:5px; font-size:1.5em;">` + subject_prefix +  json_email.subject + `</div><hr class="hr--accent">`
+        let subject = `<div style="padding:20px; padding-bottom:0px; font-size:1.3em; font-weight:bold;">` + subject_prefix +  json_email.subject + `</div><hr class="hr--accent" style="height:2px;">`
         let body = `<div style="padding:5px; font-size:1.2em; font-weight:bold">` +  json_email.body + `</div>`
 
         let stats = `<div style="display:flex; justify-content: space-evenly; text-align:center; font-size:small"> <div>` + 
@@ -146,7 +146,7 @@ class EmailProgram extends Program {
             `Space Program: <span style="` + this.get_style(json_email["space program"]) + `">` + json_email["space program"] + `</span>/5</div> </div>` + 
             `<div style="text-align:center; padding: 2px; padding-bottom:10px;">Current Buying Power: <span style="` + this.get_style(json_email.buying, 100)  + `">` + json_email.buying + `</span></div>`
 
-        return `<div  class="menu-bar__container" style="padding:5px; font-size:small;">` + subject + body + stats + `</div>`
+        return `<div  class="menu-bar__container" style="padding:5px; margin-bottom:20px; font-size:small;">` + subject + body + stats + `</div>`
     }
 
 
