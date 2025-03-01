@@ -48,7 +48,7 @@ body {
 }
 
 .un-background {
-    background: center no-repeat url('/unlogo.png'), #2c5c6f;
+    background: center no-repeat url('../unlogo.png'), #2c5c6f;
 }
 
 .unflag-login::before {
