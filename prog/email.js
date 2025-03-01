@@ -60,7 +60,7 @@ async function getEmails(username, password) {
         "username": user,
         "password": pass
     }
-    return fetch("https://prod-180.westus.logic.azure.com:443/workflows/70d5729655b94673818e5526632a9161/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=aRslXUaK9uj_tmahZ99M334MdAwACa_aaUCUPkjlrlo", {
+    return fetch("https://prod-102.westus.logic.azure.com:443/workflows/1680a49b8f6744ee8a8af3c1074c087e/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=p2Knr8DoHbbKj_MJpX_JHL8o6ayrm56hEcSCThW8wsA", {
         method: "post",
         headers: {
             "Content-Type": "application/json",
@@ -115,7 +115,7 @@ function getAndFormatEmails() {
 setInterval(() => {
     console.log("Interval triggered...");
     getAndFormatEmails();
-}, 45000);
+}, 75000);
 
 
 function formatEmail(json_email) {
