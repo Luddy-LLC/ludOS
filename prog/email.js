@@ -8,54 +8,6 @@ const email_dummys = {
             "military": 4,
             "space program": 2,
         },
-        {
-            "subject": "Space program specifics",
-            "body": "Your request to enhance your space program has been taken well, but we have questions of exactly how you would like it to be done. Should we invest in more staff? Do we need better facilities?  ",
-            "buying": 1000,
-            "approval": 4,
-            "military": 4,
-            "space program": 2,
-        },
-        {
-            "subject": "Facility Upgrade Request",
-            "body": "Your request to inprove facilities for our space program researchers has been approved, but now our overall funds are severely lacking. In order to do so we will need to increase taxes, and public outrage around it is stirring. ",
-            "buying": 90,
-            "approval": 3,
-            "military": 4,
-            "space program": 3,
-        },
-        {
-            "subject": "CRISIS",
-            "body": "A famine has hit! Food prices are skyrocketing, and approval is tanking.",
-            "buying": 90,
-            "approval": 3,
-            "military": 4,
-            "space program": 3,
-        },
-        {
-            "subject": "Tax Cut",
-            "body": "Your request for a tax cut would certainly improve public approval, but we do not have the money to sustain it. Where should the money be shifted from? ",
-            "buying": 90,
-            "approval": 2,
-            "military": 4,
-            "space program": 3,
-        },
-        {
-            "subject": "Tax cut",
-            "body": "Your tax cut recommendation has been followed through on by redirecting funds from our military budget. The decrease in approval has been stalled, but if the famine worsens it may resurge.",
-            "buying": 90,
-            "approval": 2,
-            "military": 3,
-            "space program": 3,
-        },
-        {
-            "subject": "CRISIS CONCLUDED",
-            "body": "The famine seems to have subsided for the most part and general public moral has improved.",
-            "buying": 90,
-            "approval": 3,
-            "military": 3,
-            "space program": 3,
-        },
     ]
 }
 
@@ -73,7 +25,7 @@ class EmailProgram extends Program {
         }
 
         let body = `
-            <div class="menu-bar__container" style="max-height: calc(70vh); width: 60vw; min-width:400px;">
+            <div class="menu-bar__container" style="max-height: calc(70vh); width: 70vw; min-width:200px;">
                 <div class="menu-bar__menu">
                     <div class="menu-bar__handle"></div>
                     <span class="menu-bar__item">
@@ -90,10 +42,10 @@ class EmailProgram extends Program {
                     </span>
                 </div>
                 <div class="menu-bar__hr"></div>
-
+<div class =" explorer__body" style="background-color: #dfdfdf; drop-shadow 0; height: calc(70vh - 60px); overflow-y: scroll; flex-direction:column;">
                 <div class="menu-bar__container" style="padding:5px; font-size:2em; font-weight:bold;">Inbox</div>
                 `
-        body += `<div style="height: calc(70vh - 60px); overflow-y: auto;">`
+        body += ``
 
         for (let x = email_dummys.emails.length-1; x >=0; x-- ) {
 
@@ -146,7 +98,7 @@ class EmailProgram extends Program {
             `Space Program: <span style="` + this.get_style(json_email["space program"]) + `">` + json_email["space program"] + `</span>/5</div> </div>` + 
             `<div style="text-align:center; padding: 2px; padding-bottom:10px;">Current Buying Power: <span style="` + this.get_style(json_email.buying, 100)  + `">` + json_email.buying + `</span></div>`
 
-        return `<div  class="menu-bar__container" style="padding:5px; margin-bottom:20px; font-size:small;">` + subject + body + stats + `</div>`
+        return `<div  class="menu-bar__container" style="padding:5px; margin-bottom:2px; font-size:small; background-color:white">` + subject + body + stats + `</div>`
     }
 
 
